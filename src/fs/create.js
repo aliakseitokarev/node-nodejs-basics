@@ -4,10 +4,10 @@ import path from 'node:path';
 
 const create = async () => {
     const dirName = fileURLToPath(new URL('.', import.meta.url)),
-          foldeName = 'files',
+          folderName = 'files',
           fileName = 'fresh.txt',
           content = 'I am fresh and young',
-          fullPath = path.join(dirName, foldeName, fileName);
+          fullPath = path.join(dirName, folderName, fileName);
 
     try {
        await appendFile(fullPath, content, {flag: 'ax'})
