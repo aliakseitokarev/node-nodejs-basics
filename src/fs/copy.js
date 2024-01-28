@@ -14,8 +14,9 @@ const copy = async () => {
         await mkdir(fullPathToCopy);
 
         const dir = await opendir(fullPath);
-        for await (const dirent of dir)
-          await copyFile(path.join(fullPath, dirent.name), path.join(fullPathToCopy, dirent.name));
+        for await (const dirent of dir) {
+            await copyFile(path.join(fullPath, dirent.name), path.join(fullPathToCopy, dirent.name));
+        }
 
       } catch (error) {
         if (error.code === 'ENOENT' || error.code === 'EEXIST') throw new Error('FS operation failed');
