@@ -1,7 +1,6 @@
 import { createReadStream } from 'node:fs';
-// import { pipeline } from 'node:stream/promises';
 import { fileURLToPath } from 'node:url';
-import path, { resolve } from 'node:path'
+import path from 'node:path'
 import { stdout } from 'node:process';
 
 const read = async () => {
