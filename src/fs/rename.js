@@ -1,6 +1,6 @@
 import { rename as renameItem, access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import path from 'node:path'
+import path from 'node:path';
 
 const rename = async () => {
     const dirName = fileURLToPath(new URL('.', import.meta.url)),

@@ -2,11 +2,10 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { release, version } from 'node:os';
 import { createServer as createServerHttp } from 'node:http';
-import a from './files/a.json' assert {  type: 'json' };
-import b from './files/b.json' assert {  type: 'json' };
+import a from './files/a.json' with {  type: 'json' };
+import b from './files/b.json' with {  type: 'json' };
 
 import './files/c.js';
-import { assert } from 'node:console';
 
 const random = Math.random();
 

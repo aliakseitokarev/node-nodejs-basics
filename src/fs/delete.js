@@ -1,6 +1,6 @@
 import { rm, access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import path from 'node:path'
+import path from 'node:path';
 
 const remove = async () => {
     const dirName = fileURLToPath(new URL('.', import.meta.url)),
